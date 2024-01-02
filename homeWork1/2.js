@@ -7,8 +7,10 @@
 Вывести значение переменной admin в консоль.
 */
 
+function newAdmin() {
+    const name = "Ivan";
+    return name; 
+}
 
-const userName = "Ivan";
-let admin = userName;
-
+let admin = newAdmin();
 console.log(admin);

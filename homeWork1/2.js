@@ -7,6 +7,7 @@
 Вывести значение переменной admin в консоль.
 */
 
+
 const userName = "Ivan";
 let admin = userName;
 

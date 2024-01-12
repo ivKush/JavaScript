@@ -17,9 +17,9 @@
 const dayNumber = Number(prompt("Введите число от 1 до 31"));
 if (!isNaN(dayNumber)) {
   if (dayNumber > 0 && dayNumber < 32) {
-    if (dayNumber > 0 && dayNumber < 11) {
+    if (dayNumber < 11) {
       console.log(`Число ${dayNumber} попадает в 1 декаду месяца.`);
-    } else if (dayNumber > 10 && dayNumber < 21) {
+    } else if (dayNumber < 21) {
       console.log(`Число ${dayNumber} попадает во 2 декаду месяца.`);
     } else {
       console.log(`Число ${dayNumber} попадает в 3 декаду месяца.`);

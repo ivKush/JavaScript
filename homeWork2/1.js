@@ -16,12 +16,11 @@
 const positive = Number(prompt("Введите положительное значение"));
 const negative = Number(prompt("Введите отрицательное значение"));
 
-switch (!(isNaN(positive) && isNaN(negative))) {
+switch (!(Number.isNaN(positive) && Number.isNaN(negative))) {
   case positive > 0 && negative < 0:
     alert("Все значения верные.");
     break;
   default:
     alert("Одно или более значений некорректно.");
-    break;
 }
 

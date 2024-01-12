@@ -23,11 +23,11 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-const num = parseInt(prompt("Введите число"));
+const num = Number.parseInt(prompt("Введите число"));
 
 const units = num % 10;
-const decimals = parseInt((num % 100) / 10);
-const hundreds = parseInt((num % 1000) / 100);
+const decimals = Number.parseInt((num % 100) / 10);
+const hundreds = Number.parseInt((num % 1000) / 100);
 
 console.log(
   `В числе ${num} количество сотен: ${hundreds}, десятков: ${decimals}, единиц: ${units}`

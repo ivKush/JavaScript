@@ -14,6 +14,6 @@ xxxxx
 
 const a = [];
 for (let i = 0; i < 20; i++) {
-    a.push('x')
-    console.log(a.join(''));
+  a.push("x");
+  console.log(a.join(""));
 }

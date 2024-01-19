@@ -20,7 +20,6 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(arr3);
 
-
 console.log(arr3.reduce((a, b) => (a += b)));
 
 console.log(arr3.reduce((a, b) => Math.min(a, b)));
@@ -32,3 +31,9 @@ for (let i = 0; i < arr3.length; i++) {
   }
 }
 console.log(arr4);
+
+console.log(
+  arr3.filter((num, i) => {
+    if (num === 3) return i;
+  })
+);

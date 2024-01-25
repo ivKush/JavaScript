@@ -21,26 +21,17 @@ function getEvenNumbers(arg) {
 console.log(getEvenNumbers(arr2));
 
 function calculateAverage(arg) {
-    return arg.reduce((a, b) => a += b) / arg.length;
+    return arg.reduce((a, b) => a + b, 0) / arg.length; // reduce((a, b) - берет первые два элемента массива и проделывает операции указанные в колбекфункции сохраняя результат в первой переменной, вторая переменная переберает массив. По итогу возвращает накопленный результат из первой переменной.
 }
 console.log(calculateAverage(arr2));
 
 function capitalizeFirstLetter(arg) {
-    let arr3 = arg.split(/\s/);
-    // arr3 = arr3.map(el => {
-    //     let a = el[0].toUpperCase();
-    //     return el[0] = a; // Не работает - не присваевает значение ???
-    // });
-
-    for (let el of arr3) {
-        let a = el[0].toUpperCase();
-        // (el[0]) = el[0].toUpperCase();
-        
-        console.log(a);
-    };
-    return arr3;
+    let arr3 = arg.split(' ');
+    return arr3.map(el => el[0].toUpperCase() + el.slice(1)).join(' ');
+    // map() - переберает массив поэлементно и возвращает массив.
+    // slice(1) - делает срез массива по индексам.
+    // join(' ') - собирает массив в строку через переданный символ.
 }
-
 
 console.log(capitalizeFirstLetter('Жили были дед и баба'));
 

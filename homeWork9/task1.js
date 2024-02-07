@@ -10,14 +10,15 @@ getUserData использует fetch для получения данных о
 */
 
 function getUserData(_id) {
-    let response = fetch("https://jsonplaceholder.typicode.com/users");
-    response.then(el => el.json()).then((el) => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(el => el.json())
+    .then((el) => {
         for (const i of el) {
             if (i.id === _id) return console.log(i);
         };
-        return console.log('Нет такого пользователя');
+        throw 'Нет такого пользователя';
     })
-    .catch(() => console.log('Error'));
+    .catch((err) => console.log(err));
 }
 
 getUserData(4);

@@ -31,21 +31,21 @@ const user = {
 };
 
 function saveUserData(userData) {
-    let response = fetch("https://jsonplaceholder.typicode.com/users", {
+    fetch("https://jsonplaceholder.typicode.com/users", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(userData),
-    });
-    return response;
+    }).then(response => {
+        if (response.ok) {
+            return response.json().then((res) => {
+                console.log(res);
+                console.log('User data saved successfully');
+            });
+        }
+        console.log('--ERROR--');
+    })
 }
 
-saveUserData(user)
-    .then((el) => {
-        console.log('User data saved successfully');
-    })
-    .catch(error => {
-        console.log(error.message);
-    });
-
+saveUserData(user);
